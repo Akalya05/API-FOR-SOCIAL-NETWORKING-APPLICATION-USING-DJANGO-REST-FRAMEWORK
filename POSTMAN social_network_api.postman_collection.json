@@ -1,0 +1,172 @@
+{
+	"info": {
+		"_postman_id": "a691e50d-92d6-4c75-bc50-7a082e208a0e",
+		"name": "POSTMAN social_network_api",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "36642611"
+	},
+	"item": [
+		{
+			"name": "SIGNUP",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"test@example.com\",\r\n    \"password\": \"password123\",\r\n    \"name\": \"Test User\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://127.0.0.1:8000/signup/"
+			},
+			"response": []
+		},
+		{
+			"name": "login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"email\": \"test@example.com\",\r\n  \"password\": \"password123\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://127.0.0.1:8000/api/login/"
+			},
+			"response": []
+		},
+		{
+			"name": "Search Users by Email",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/api/search/?keyword=test@example.com",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"search",
+						""
+					],
+					"query": [
+						{
+							"key": "keyword",
+							"value": "test@example.com"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Search Users by Name",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/api/search/?keyword=test",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"search",
+						""
+					],
+					"query": [
+						{
+							"key": "keyword",
+							"value": "test"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Send Friend Request",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"sender_id\": 1,\r\n  \"receiver_id\": 2\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8000/api/friend-request/send/"
+			},
+			"response": []
+		},
+		{
+			"name": "Accept Friend Request",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"request_id\": 1\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8000/api/friend-request/accept/\n"
+			},
+			"response": []
+		},
+		{
+			"name": "Reject Friend Request",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"request_id\": 2\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8000/api/friend-request/reject/"
+			},
+			"response": []
+		},
+		{
+			"name": "List Friends API Collection",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:8000/api/friend-request/"
+			},
+			"response": []
+		},
+		{
+			"name": "List Pending Friend Requests",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:8000/api/friend-request/pending/"
+			},
+			"response": []
+		}
+	]
+}
