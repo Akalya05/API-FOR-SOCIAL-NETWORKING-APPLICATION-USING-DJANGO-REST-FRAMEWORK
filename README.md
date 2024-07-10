@@ -1,6 +1,5 @@
 **API FOR SOCIAL NETWORKING APPLICATION USING DJANGO REST FRAMEWORK** 
-This repository contains the backend API for a social networking application developed using Django Rest Framework. It includes user authentication, friend requests handling, and other functionalities as per the provided problem statement.
-
+This repository contains the backend API for a social networking application developed using Django Rest Framework. It includes user authentication, friend requests handling, and some other functionalities.
 **INSTALLATION**
 Follow these steps to set up and run the project locally:
 
